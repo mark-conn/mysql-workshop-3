@@ -1,0 +1,5 @@
+select Entry.firstName, AddressBook.name
+from Entry
+INNER JOIN AddressBook
+ON Entry.addressBookId = AddressBook.id
+WHERE AddressBook.name = "Pharetra Ut Limited";
