@@ -1,0 +1,4 @@
+select DISTINCT(SUBSTRING(ElectronicMail.content FROM 
+LOCATE("@", ElectronicMail.content, 1)))
+from ElectronicMail
+order by ElectronicMail.content DESC;
