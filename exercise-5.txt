@@ -1,0 +1,5 @@
+select Account.email, AddressBook.id
+from Account
+INNER JOIN AddressBook
+ON Account.id = AddressBook.accountId
+WHERE AddressBook.id = 100;
