@@ -1,0 +1,13 @@
+select 
+accountId, 
+count(*) as accounts 
+from AddressBook 
+Group by accountId
+order by accounts desc;
+
+select 
+addressBookId, 
+count(*) as entries 
+from Entry 
+Group by addressBookId
+order by entries desc;
