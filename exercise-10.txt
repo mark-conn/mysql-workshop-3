@@ -1,0 +1,3 @@
+UPDATE ElectronicMail set type = 'temp' where type = 'home';
+UPDATE ElectronicMail set type = 'home' where type = 'work';
+UPDATE ElectronicMail set type = 'work' where type = 'temp';
