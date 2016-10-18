@@ -1,0 +1,4 @@
+select city, country from Address
+where country IN('Canada', 'Austria', 'Isle of Man', 'Ireland', 'Japan')
+group by city
+order by country DESC;
