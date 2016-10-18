@@ -1,0 +1,5 @@
+select Phone.content, Entry.firstName, Entry.lastName
+From Entry
+INNER JOIN Phone
+ON Entry.addressBookId = Phone.entryId
+WHERE Entry.firstName = 'Charlotte' AND Entry.lastName = "Jenkins";
