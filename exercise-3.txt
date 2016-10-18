@@ -1,0 +1,5 @@
+select LCASE(country), COUNT(country) 
+from Address
+group by country
+order by COUNT(country) desc;
+
