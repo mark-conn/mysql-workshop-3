@@ -1,13 +1,20 @@
-select 
-accountId, 
-count(*) as accounts 
-from AddressBook 
-Group by accountId
-order by accounts desc;
+mysql> create table Account(id INT auto_increment primary key);
+mysql> create table AddressBook(id INT auto_increment primary key);
+mysql> create table Entry(id INT auto_increment primary key);
 
-select 
-addressBookId, 
-count(*) as entries 
-from Entry 
-Group by addressBookId
-order by entries desc;
+mysql> alter table Entry add type ENUM('phone', 'address', 'electronic-mail');
+mysql> create table Address(id INT auto_increment primary key);
+mysql> alter table Address add type ENUM('home','work','other');
+
+create table ElectronicMail 
+(
+id INT auto_increment primary key, 
+Type ENUM('home', 'work', 'other')
+); 
+
+
+create table phone (
+id INT auto_increment primary key,
+type ENUM('home', 'work', 'other'),
+subtype ENUM ('landline', 'cellular', 'fax')
+);
